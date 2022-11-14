@@ -1,0 +1,113 @@
+* {
+  font-family: "Noto Serif", serif, sans-serif;
+}
+
+header {
+  text-align: center;
+  background-image: url("../images/pexels-ekrulila-2272760.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  min-height: 160px;
+  background-size: 23%;
+}
+
+h1 {
+  color: rgb(10, 15, 162);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+main {
+  margin: 2px auto;
+  padding: 2px;
+  text-align: center;
+  /* width: 1000px;
+  height: 2000px; */
+  overflow: scroll;
+}
+
+footer {
+  color: rgb(22, 20, 20);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+img {
+  width: 600px;
+  border: 10px solid rgb(95, 236, 231);
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  opacity: 0.95;
+}
+
+img:hover {
+  width: 600px;
+  border: 10px solid rgb(201, 240, 10);
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.navigation {
+  list-style-type: none;
+  color: white;
+  text-align: right;
+  margin: 5px 30px;
+  font-size: 30px;
+  background-color: rgb(23, 117, 217);
+  background-position: center;
+}
+
+p {
+  font-size: 20px;
+  border: 5px;
+  padding: 15px;
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo {
+  animation: fade_in 5s;
+  width: 30%;
+  height: 30%;
+  border: 0px;
+}
+
+@media (prefers-reduced-motion) {
+  #logo {
+    animation: none;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+@media all and (min-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    /* grid-template-rows: 70px repeat(5, auto) 100px; */
+    row-gap: 30px;
+  }
+  header {
+    text-align: center;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
