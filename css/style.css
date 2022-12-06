@@ -12,7 +12,7 @@ header {
 }
 
 h1 {
-  color: rgb(10, 15, 162);
+  color: rgb(5, 5, 5);
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   text-align: center;
@@ -22,8 +22,6 @@ main {
   margin: 2px auto;
   padding: 2px;
   text-align: center;
-  /* width: 1000px;
-  height: 2000px; */
   overflow: scroll;
 }
 
@@ -43,7 +41,6 @@ img {
 }
 
 img:hover {
-  /* width: 600px; */
   border: 10px solid rgb(201, 240, 10);
   padding: 20px 10px;
   position: relative;
@@ -58,6 +55,16 @@ p {
   padding: 15px;
 }
 
+.current {
+  background-color: rgb(27, 209, 97);
+}
+
+.word-break {
+  width: 100px;
+  padding: 15px;
+  word-break: break-all;
+}
+
 @keyframes fade_in {
   from {
     opacity: 0;
@@ -69,11 +76,11 @@ p {
 
 .navigation {
   list-style-type: none;
-  color: white;
   text-align: right;
   margin: 5px 30px;
   font-size: 30px;
-  background-color: rgb(23, 117, 217);
+  color: #0000ff;
+  background-color: #cfdfc0;
   background-position: center;
 }
 
@@ -102,13 +109,12 @@ p {
 .grid-navigation {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-
   list-style-type: none;
-  color: white;
   text-align: right;
   margin: 5px 30px;
   font-size: 30px;
-  background-color: rgb(23, 117, 217);
+  color: #0000ff;
+  background-color: #cfdfc0;
   background-position: center;
 }
 
@@ -134,25 +140,37 @@ p {
 }
 
 .flex-container {
-  width: 90%;
-  margin: 10px auto;
+  margin: 3px auto;
   padding: 0;
-  list-style: none;
-  border: 10px solid black;
+  border: 3px solid black;
 
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
-  /* min-height: 600px;fl */
   max-width: 1200px;
-  align-content: center;
+  justify-items: center;
 }
 .basis {
   background: white;
   color: black;
   border: 2px solid;
-  max-width: 400px;
-  /* flex-basis: 350px; */
+  width: 380px;
+}
+
+.skip {
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip:focus {
+  top: 20px;
+  color: black;
+  text-decoration-style: solid;
 }
 
 @media (prefers-reduced-motion) {
@@ -161,16 +179,15 @@ p {
   }
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 800px) and (max-width: 1199px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.1fr 0.5fr 4fr 0.2fr 0.2fr;
+    grid-template-rows: 0.2fr 0.5fr 4fr 0.2fr 0.2fr;
     row-gap: 10px;
   }
 
   #logo {
-    animation: fade_in 5s;
     width: auto;
     height: auto;
     max-width: 60%;
@@ -184,11 +201,68 @@ p {
     grid-row: 1 / span 1;
 
     list-style-type: none;
-    color: white;
+
     text-align: right;
     margin: 5px 30px;
     font-size: 30px;
-    background-color: rgb(23, 117, 217);
+
+    color: #0000ff;
+    background-color: #cfdfc0;
+    background-position: center;
+  }
+
+  .grid-header {
+    text-align: center;
+    grid-column: 1 / span 8;
+    grid-row: 2 / span 1;
+  }
+
+  .grid-main {
+    grid-column: 1 / span 8;
+    grid-row: 3 / span 1;
+  }
+
+  .grid-aside {
+    grid-column: 1 / span 8;
+    grid-row: 4 / span 1;
+  }
+
+  .grid-footer {
+    grid-column: 1 / span 8;
+    grid-row: 5 / span 1;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0.1fr 0.5fr 4fr 0.2fr 0.3fr;
+    row-gap: 10px;
+  }
+
+  #logo {
+    width: auto;
+    height: auto;
+    max-width: 60%;
+    max-height: 60%;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .grid-navigation {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 1;
+
+    list-style-type: none;
+
+    text-align: right;
+    margin: 5px 30px;
+    font-size: 30px;
+    /* background-color: rgb(23, 117, 217); */
+    color: white;
+    color: #0000ff;
+    background-color: #cfdfc0;
     background-position: center;
   }
 

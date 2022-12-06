@@ -1,6 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-12B3VJ1PXH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-12B3VJ1PXH");
+    </script>
+
     <meta charset="utf-8" />
     <title>Home of Photography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,11 +35,15 @@
   </head>
 
   <body class="grid-container">
+    <a class="skip" href=".grid-main">Skip to Main Content</a>
+    <!--  -->
     <img src="images/logo.png" alt="website logo" id="logo" />
     <nav class="grid-navigation">
       <ul>
         <li>
-          <a href="./index.html"> <i class="fa-solid fa-camera"></i>Home</a>
+          <a href="./index.html" class="current">
+            <i class="fa-solid fa-camera"></i>Home</a
+          >
         </li>
         <li><a href="./gallery.html">Gallery</a></li>
         <li><a href="./tips.html">Photography Tips for Beginners</a></li>
@@ -91,7 +110,7 @@
     </main>
 
     <aside class="grid-aside">
-      <h4>Sony A6400</h4>
+      <h2>Sony A6400</h2>
       <p>
         The camera I used is Sony A6400. Sony Alpha a6400 Mirrorless Camera:
         Compact APS-C Interchangeable Lens Digital Camera with Real-Time Eye

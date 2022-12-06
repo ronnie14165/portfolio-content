@@ -1,6 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-12B3VJ1PXH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-12B3VJ1PXH");
+    </script>
+
     <meta charset="utf-8" />
     <title>About Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +34,8 @@
   </head>
 
   <body>
+    <a class="skip" href=".grid-main">Skip to Main Content</a>
+
     <nav class="navigation">
       <ul>
         <li>
@@ -26,9 +43,10 @@
         </li>
         <li><a href="./gallery.html">Gallery</a></li>
         <li><a href="./tips.html">Photography Tips for Beginners</a></li>
-        <li><a href="./aboutme.html">About Me</a></li>
+        <li><a href="./aboutme.html" class="current">About Me</a></li>
       </ul>
     </nav>
+
     <header>
       <h1>About Me</h1>
     </header>
@@ -92,6 +110,19 @@
         />
         <figcaption>A symbol in central campus of Umich.</figcaption>
       </figure>
+
+      <form action="https://formspree.io/f/xwkzwapz" method="POST">
+        <label>
+          Contact me ------ Your email:
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+      </form>
     </main>
 
     <footer>
